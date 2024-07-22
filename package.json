@@ -1,0 +1,12 @@
+{
+  "name": "dnx-shop",
+  "version": "1.0.0",
+  "description": "Ecommerce website repo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
