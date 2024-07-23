@@ -1,11 +1,12 @@
+import msg from "./msg"
 
+// So file names with .js will not work in vite but will work in react.
+// Concluding msg.js will always work in ReactJS  but not it ViteJS
 
 function App() {
 
   return (
-    <>
-      <h1>Hello Anurag with Vite</h1>
-    </>
+    <msg/>
   )
 }
 
