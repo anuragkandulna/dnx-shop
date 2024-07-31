@@ -12,12 +12,15 @@ function App() {
   // let counter = 15
 
   const addValue = () => {
-    // counter = counter + 1
-    // console.log('Value added', Math.random());
-
     counter = counter + 1
     setCounter(counter)
-    console.log('Updated value: ', counter)
+    console.log('Updated value after increment: ', counter)
+  }
+
+  const removeValue = () => {
+    // counter = counter - 1
+    setCounter(counter - 1) 
+    console.log('Updated value after decrement: ', counter)
   }
 
   return (
@@ -27,7 +30,7 @@ function App() {
 
       <button onClick={addValue}>Add value</button>
       <br/>
-      <button>Remove value</button>
+      <button onClick={removeValue}>Remove value</button>
     </>
   )
 }
