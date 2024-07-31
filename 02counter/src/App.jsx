@@ -4,10 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let counter = 15
+
+  // Give default value as anything like num, str, etc.
+  // counter is variable name, setCounter is function to update value by react all the places.
+  let [counter, setCounter] = useState(15) 
+
+  // let counter = 15
 
   const addValue = () => {
-    console.log('Value added', Math.random());
+    // counter = counter + 1
+    // console.log('Value added', Math.random());
+
+    counter = counter + 1
+    setCounter(counter)
+    console.log('Updated value: ', counter)
   }
 
   return (
