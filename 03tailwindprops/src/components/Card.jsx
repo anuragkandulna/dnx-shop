@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({channel, btnText}) {
+function Card({channel, btnText='Default text.'}) {
     // without destructuring use this code always: props['object key']
     // console.log('props', props);
     // console.log(props['channel'])
@@ -24,7 +24,7 @@ function Card({channel, btnText}) {
                 {channel}
                 </p>
                 <button class="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-                {btnText || 'Default text.'} →
+                {btnText} →
                 </button>
             </div>
             </div>
