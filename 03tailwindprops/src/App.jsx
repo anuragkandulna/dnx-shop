@@ -16,7 +16,9 @@ function App() {
   return (
     <>
       <h1 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind test</h1>
-      <Card channel='Learn JS' someObj={myObj} />
+      <Card channel='Learn JS' btnText='More...' />
+      <Card channel='Testing JS' btnText='Visit me' />
+      <Card channel='Testing JS' />
     </>
   )
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
-function Card({someObj, channel}) {
+function Card({channel, btnText}) {
     // without destructuring use this code always: props['object key']
     // console.log('props', props);
     // console.log(props['channel'])
     // console.log(props['someObj'].username)
     
     // with structuring
-    console.log(someObj)
+    // console.log(someObj)
 
     return (
         <>
@@ -19,12 +19,12 @@ function Card({someObj, channel}) {
             />
             <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-left">
-                <h1 class="text-lg font-semibold text-white">{someObj.username}</h1>
+                <h1 class="text-lg font-semibold text-white">{channel}</h1>
                 <p class="mt-2 text-sm text-gray-300">
-                {someObj.year}
+                {channel}
                 </p>
                 <button class="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-                View Profile →
+                {btnText || 'Default text.'} →
                 </button>
             </div>
             </div>
