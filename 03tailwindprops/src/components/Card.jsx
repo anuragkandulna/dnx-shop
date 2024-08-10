@@ -2,6 +2,8 @@ import React from "react";
 
 function Card(props) {
     console.log('props', props);
+    console.log(props['channel'])
+    console.log(props['someObj'].username)
 
     return (
         <>
