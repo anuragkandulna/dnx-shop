@@ -41,7 +41,7 @@ function App() {
   }, [password])
 
 
-  // This is for running the function
+  // This is for running the function the first time the page loads
   useEffect(() => {
     passwordGenerator();
   }, [length, allowNum, allowChar, passwordGenerator]);
