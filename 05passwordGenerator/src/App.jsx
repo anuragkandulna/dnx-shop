@@ -14,7 +14,7 @@ function App() {
     if (allowNum) str += "0123456789"
     if (allowChar) str += "!@#$%&*?-_"
 
-    for (let i = 1; i <= array.lenth; i++) {
+    for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1)
 
       pass += str.charAt(char)
@@ -24,11 +24,11 @@ function App() {
     // Set password
     setPassword(pass)
 
-  }, [length, allowNum, allowChar, setPassword])
+  }, [length, allowNum, allowChar, setPassword]);
 
   useEffect(() => {
-    passwordGenerator()
-  }, [length, allowNum, allowChar, passwordGenerator])
+    passwordGenerator();
+  }, [length, allowNum, allowChar, passwordGenerator]);
 
   return (
     <>
