@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 
 function App() {
   const [length, setLength] = useState(8)
@@ -17,15 +17,18 @@ function App() {
     for (let i = 1; i <= array.lenth; i++) {
       let char = Math.floor(Math.random() * str.length + 1)
 
-      pass = str.charAt(char)
+      pass += str.charAt(char)
 
     }
 
     // Set password
     setPassword(pass)
 
-  }, [length, allowNum, allowChar])
+  }, [length, allowNum, allowChar, setPassword])
 
+  useEffect(() => {
+    passwordGenerator()
+  }, [length, allowNum, allowChar, passwordGenerator])
 
   return (
     <>
@@ -60,7 +63,7 @@ function App() {
             <input 
               type="checkbox"
               defaultChecked={allowNum}
-              id="nummberInput"
+              id="numberInput"
               onChange={() => {
                 setAllowNum((prev) => !prev);
               }}
