@@ -74,7 +74,7 @@ function App() {
               defaultChecked={allowChar}
               id="charInput"
               onChange={() => {
-                setAllowNum((prev) => !prev);
+                setAllowChar((prev) => !prev);
               }}
             />
             <label htmlFor='charInput'>Characters</label>
