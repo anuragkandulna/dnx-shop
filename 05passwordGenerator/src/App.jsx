@@ -24,8 +24,10 @@ function App() {
     // Set password
     setPassword(pass)
 
+    // This is for optimization
   }, [length, allowNum, allowChar, setPassword]);
 
+  // This is for running the function
   useEffect(() => {
     passwordGenerator();
   }, [length, allowNum, allowChar, passwordGenerator]);
