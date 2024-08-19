@@ -1,5 +1,8 @@
 import React from "react";
+import {Link, NavLink} from "react-router-dom";
 
+//  Link is used in place of <A/> tag because entire page gets refreshed when A is clicked.
+// But In react, dom elements are manipulated hence it is fast. 
 
 export default function Header() {
     return (
