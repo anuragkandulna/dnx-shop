@@ -9,7 +9,7 @@ function Profile() {
         if (!user) return <div>please login</div>
 
         return (
-            <div> Welcome {user.usename}!!!</div>
+            <div> Welcome {user.username}!!!</div>
         )
 
 }
