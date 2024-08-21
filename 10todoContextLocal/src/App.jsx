@@ -28,7 +28,7 @@ export default function App() {
         // iterate over all todos and access correct one and flip completed from todo object
         setTodos((prev) =>
             prev.map((prevTodo) =>
-                prevTodo === id
+                prevTodo.id === id
                     ? { ...prevTodo, completed: !prevTodo.completed }
                     : prevTodo
             )
