@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TodoProvider } from "./contexts";
 
 export default function App() {
@@ -33,7 +33,23 @@ export default function App() {
             )
         );
     };
-    // Till here basic context functionality is finished. Next: Storage functionality.
+
+    // Till here basic context functionality is finished.
+    // Next: Browser LocalStorage functionality.
+    // This useEffect should only load first time because it also fetches from local storage.
+    useEffect(() => {
+        // this code is applicable for client side rendering. It does'nt work in server side redering.
+        const todos = JSON.parse(localStorage.getItem("todos"));
+
+        if (todos && todos.length > 0) {
+            setTodos(todos);
+        }
+    }, []);
+
+    // 2nd useEffect to load all all the other times.
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
 
     return (
         <TodoProvider
