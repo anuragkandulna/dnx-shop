@@ -8,7 +8,7 @@ function App() {
 
     return (
         <>
-            <h1>Redux toolkit</h1>
+            <h1 className="text-3xl font-bold underline">Redux toolkit</h1>
         </>
     );
 }
